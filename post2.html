@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>LMS TE - Testing Cycle</title>
+        <title>LMS TE - Environment Setup</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -40,7 +40,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>The 6 stages of software testing</h1>
+                            <h1>Setting up a Test Environment</h1>
                             <span class="meta">
                                 Posted by
                                 <a href="#!">Omar Baz</a>
@@ -56,44 +56,29 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>In this guide we will be following the standard Software Testing LifeCycle; which is a sequence of specific actions performed during the testing process to ensure that the software quality objectives are met. Following the correct sequence will ensure a successful deployment of the testing environment and proper results outputs for every specified test case.</p>
-                        <p>The framework consits of 6 core principles:
-                        <ul>
-                            <li>1. Requirements analysis</li>
-                            <li>2. Test planning</li>
-                            <li>3. Test Case Development</li>
-                            <li>4. Test Environment Setup</li>
-                            <li>5. Test Cycle Closure</li>
-                        </ul>
+                        <p>In this part we will be diving further into setting up a testing environment. This might be a tricky part and you could encounter some errors, all links and references can be found in the <em>Github Repository.</em></p>
+                        
+                        <p>The guide focuses on three types of environment deployment:
+                        <li>Locally</li>
+                        <li>Virtually</li>
+                        <li>Docker Images</li>
+                            
+                        Deciding which type of deployment you need for your setup depends on the analyzed requirements and test cases which were defined in the <em>two SLTC</em> stages before this one.
+            
+                        In case you are still not sure on which type you should choose, the guide will point out key differences and advantages of each type.
                         </p>
-                        <p>In this guide we will be talking about test case development in detail, since it varies depending on what LMS you are targeting</p>
-                        <h2 class="section-heading">1. Requirement analysis</h2>
-                        <p>The first stage of SLTC is requirement analysis. The main objective of this stage is to identify what needs to be tested and figure out the desired outcome. This can include architectural and design requirements, and system and integration requirements. 
-                        <br>We will be conisdering an example of an LMS System where a student can register of different courses.
-                        <br>Examples of requirements can include:
-                        <ul>
-                            <li>Students will be able to enroll to undergraduate courses</li>
-                            <li>A professor will log into the system by providing his username and password</li>
-                            <li>A student will have either undergraduate or post graduate but not both</li>
-                            <li>Register student and enrol courses webpages will load within 5 seconds</li>
-                        </ul>
-                        The requirements will vary from one system to another, based on the desired outcome and goals, as well as specific user experience parameters.
-                    </p>
-                        <h2 class="section-heading">2. Test Planning</h2>
-                <p>
-                    The second stage of SLTC is test planning. In this stage, the testing strategy should be defined. This includes noting down what types of tests will be covered and which will be ignored. Examples of test types include: unit testing, API testing, intergration testing and interface testing. The most important type to be defined in our case is unit testing, since we are focusing on testing plugins within an LMS environment.
-                </p>
-                       <h2 class="section-heading">3. Test Case Development</h2>
-                <p>
-                    The third stage of SLTC is test case development. The main purpose of this stage is to create detailed test cases and prepare the data for testing. A comprehensive test case specifies the inputs, execution conditions, testing procedure, and expected results that all define a single test case to be executed in order to achieve the testing objectives. In this stage it is important to note how are we gonna structure the test and the desired objectives we are aiming to achieve.
-                </p>
-                       <h2 class="section-heading">4. Environment setup</h2>
-                <p>
-                    The fourth stage of SLTC is the most important and relevant to us in this guide. The environment setup stage can be very time-consuming, but it's absolutely critical because it enables us to efficiently execute our test cases. In our case, we could either setup our enivronment locally or virtually on a server.
+                    <h2 class="section-heading">1. Virtual Testing Environment</h2>
+                    <p>
+                        A virtual testing environment consits of setting up a Virtual Machine that runs on a server and deploying your development environment on that machine (i.e an image of the LMS you are testing.)
+                        <br>A Virtual Machine is an emulation of a computer system. Virtual Machines act like normal computers and are based on computer architectures that provide the functionality of a physical machine, however one that is running virtually on a server. This includes advantages such as:</br>
                     <ul>
-                        <li><h3 class="section-subheading">Local Setup</h3></li>
+                        <li>1. Reliability: A VM includes virtual resources required to run our software and OS. Everything is virtualized including the Disk Drive, which insures that even if our machine crashes, the host computer is safe.</li>
+                        <li>2. Multiple O/S: The VM is capable of running any desired software, regardless of what type of OS the host system is using. This gives us the ability to choose whatever OS we see fits best to our scenarios. (i.e) A requirement might be that the system runs on Linux, a VM insures that you can test that)</li>
                     </ul>
                     </p>
+                <p>
+                This guide will be using <a href="https://okeanos.grnet.gr/services/cyclades/"><em>Cyclades</em></a> to deploy a Virtual Machine running on a server. Cyclades is a VMWare provided by <a href="https://okeanos.grnet.gr/about/what/">Okeanos</a> that is free for students, professors and researchers with a valid academic login.
+                </p>
                     </div>
                 </div>
             </div>
