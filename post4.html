@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title>LMS TE - Environment Setup</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">LMS Testing Environment</a>
+                <a class="navbar-brand" href="index.html">LMS Testing environment</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -28,76 +28,61 @@
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Steps</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+        <header class="masthead" style="background-image: url('assets/img/sltc.png')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="site-heading">
-                            <h1>A walkthrough guide</h1>
-                            <span class="subheading"></span>
+                        <div class="post-heading">
+                            <h1>Setting up a Local Test Environment</h1>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">Omar Baz</a>
+                                on August 24, 2022
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">The Software Testing Life Cycle</h2>
-                            <h3 class="post-subtitle">An overview of the structure that this guide will be following</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Omar Baz</a>
-                            on September 24, 2022
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>In this part we will be diving further into setting up a testing environment. This might be a tricky part and you could encounter some errors, all links and references can be found in the <em>Github Repository.</em></p>
+                        
+                        <p>The guide focuses on three types of environment deployment:
+                        <li>Locally</li>
+                        <li>Virtually</li>
+                        <li>Docker Images</li>
+                            
+                        Deciding which type of deployment you need for your setup depends on the analyzed requirements and test cases which were defined in the <em>two SLTC</em> stages before this one.
+            
+                        In case you are still not sure on which type you should choose, the guide will point out key differences and advantages of each type.
                         </p>
+                    <h2 class="section-heading">1. Virtual Testing Environment</h2>
+                    <p>
+                        A virtual testing environment consits of setting up a Virtual Machine that runs on a server and deploying your development environment on that machine (i.e an image of the LMS you are testing.)
+                        <br>A Virtual Machine is an emulation of a computer system. Virtual Machines act like normal computers and are based on computer architectures that provide the functionality of a physical machine, however one that is running virtually on a server. This includes advantages such as:</br>
+                    <ul>
+                        <li>1. Reliability: A VM includes virtual resources required to run our software and OS. Everything is virtualized including the Disk Drive, which insures that even if our machine crashes, the host computer is safe.</li>
+                        <li>2. Multiple O/S: The VM is capable of running any desired software, regardless of what type of OS the host system is using. This gives us the ability to choose whatever OS we see fits best to our scenarios. (i.e) A requirement might be that the system runs on Linux, a VM insures that you can test that)</li>
+                    </ul>
+                    </p>
+                <p>
+                This guide will be using <a href="https://okeanos.grnet.gr/services/cyclades/"><em>Cyclades</em></a> to deploy a Virtual Machine running on a server. Cyclades is a VMWare provided by <a href="https://okeanos.grnet.gr/about/what/">Okeanos</a> that is free for students, professors and researchers with a valid academic login.
+                </p>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post2.html"><h2 class="post-title">Test Environment Setup</h2>
-                    <h3 class="post-subtitle">In depth walkthrough to setting up a test environemnt</h3>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 18, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <!-- Post preview-->
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Failure is not an option</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
                 </div>
             </div>
-        </div>
+        </article>
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
