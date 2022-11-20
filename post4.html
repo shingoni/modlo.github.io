@@ -28,7 +28,7 @@
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">STLC</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -56,28 +56,46 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>In this part we will be diving further into setting up a testing environment. This might be a tricky part and you could encounter some errors, all links and references can be found in the <em>Github Repository.</em></p>
+                        <p>In this section we will be talking about setting up a Local Testing Environment. This might be a tricky part and you could encounter some errors, all links and references can be found in the <em>Github Repository.</em></p>
                         
                         <p>The guide focuses on three types of environment deployment:
-                        <li>Locally</li>
-                        <li>Virtually</li>
+                        <li>Local</li>
+                        <li><a href="post2.html">Virtual</a></li>
                         <li>Docker Images</li>
                             
                         Deciding which type of deployment you need for your setup depends on the analyzed requirements and test cases which were defined in the <em>two SLTC</em> stages before this one.
             
-                        In case you are still not sure on which type you should choose, the guide will point out key differences and advantages of each type.
+                        In case you are still not sure on which type you should choose, the guide points out key differences and advantages of each type.
                         </p>
-                    <h2 class="section-heading">1. Virtual Testing Environment</h2>
+                    <h2 class="section-heading">2. Local Testing Environment</h2>
                     <p>
-                        A virtual testing environment consits of setting up a Virtual Machine that runs on a server and deploying your development environment on that machine (i.e an image of the LMS you are testing.)
-                        <br>A Virtual Machine is an emulation of a computer system. Virtual Machines act like normal computers and are based on computer architectures that provide the functionality of a physical machine, however one that is running virtually on a server. This includes advantages such as:</br>
-                    <ul>
-                        <li>1. Reliability: A VM includes virtual resources required to run our software and OS. Everything is virtualized including the Disk Drive, which insures that even if our machine crashes, the host computer is safe.</li>
-                        <li>2. Multiple O/S: The VM is capable of running any desired software, regardless of what type of OS the host system is using. This gives us the ability to choose whatever OS we see fits best to our scenarios. (i.e) A requirement might be that the system runs on Linux, a VM insures that you can test that)</li>
-                    </ul>
+                        Local testing is essentially the ability to test your software through a local copy on your machine. This process eliminates the need to create a virtual machine, while having all of the files on your machine.
                     </p>
                 <p>
-                This guide will be using <a href="https://okeanos.grnet.gr/services/cyclades/"><em>Cyclades</em></a> to deploy a Virtual Machine running on a server. Cyclades is a VMWare provided by <a href="https://okeanos.grnet.gr/about/what/">Okeanos</a> that is free for students, professors and researchers with a valid academic login.
+                This guide will be using <a href="https://en.wikipedia.org/wiki/Moodle"><em>Moodle</em></a> as a reference LMS. If you are developing for a different LMS, the process should be similair.
+                </p>
+                <h2 class="section-heading">Installing Moodle</h2>
+                <p>
+                Moodle should only be installed from the <a href="https://download.moodle.org/releases/latest/">Official downloads website</a> and depending on what OS your system is running, choose the equivalent <em>Moodle Installer Package</em> and unzip (extract) the files to a subdirectory of your choice (it is important to remember where your files are setup, therefore it is best to create an independant folder for all of our testing purposes).
+                <br><br><b>1. Click on <em>Start Moodle</em> to proceed.</b>
+                <img src="assets/img/apache.jpg" alt="Trulli" width="600" height="500">
+                <br><br>Accept the security alerts (This will give permissions to <a href="https://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache</a> and <a href="https://en.wikipedia.org/wiki/MySQL">MySQL</a> to run on your machine, which are both required to run Moodle locally.
+                    <br>  
+                <br><b>2. Access your Moodle Site through LocalHost</b>
+                <br> Enter 127.0.0.1 in your web browser to proceed with the installation. Remember, this will always be how you access your Moodle site.
+                <br>
+                <img src="assets/img/localhost.jpg" alt="Trulli" width="600" height="500">
+                <br><br>Click on next and proceed with the default configurations, take note of the Database setting (Name and Password that you setup). You will be using this Database in further steps.
+                <br> After finishing up the setup, you will get the final page of configurations in which the Moodle Admin is setup
+                <br>
+                    <img src="assets/img/account.jpg" alt="Trulli" width="600" height="500">
+                <br><br> Enter a password and email address, as well as Country and Timezone to finish up the site deployment process.
+                <br> Click on update profile. On the next page, add a support and noreply email (this could be random if not needed for testing purposes).
+                <br><br><b>3. Upload dummy data</b>
+                When testing a Moodle Plugin, you will often need to populate the Moodle Site that you've deployed with user data, here referred to as Dummy Data to emphasize that this is all random fake data for the purpose of testing only.
+                <br><br> Depending on your testing requirements, you might already have a dummy user database (with enrolled courses) that you could use.
+                <br> If this is not the case, please refer to the Github repository for a <a href="https://github.com/shingoni/modlo.github.io/blob/main/Userdata.csv">CSV file</a>"Userdata.csv" containing basic information for 14 users (Username, First name, Last Name and Email)
+                <br><img src="assets/img/bulk.jpg" alt="Trulli" width="700" height="500">
                 </p>
                     </div>
                 </div>
@@ -89,32 +107,18 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
+                  
+                           
                             <li class="list-inline-item">
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                        <a href="https://github.com/shingoni/modlo.github.io"><i class="fab fa-github fa-stack-1x fa-inverse"></i></a>
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                        
                     </div>
                 </div>
             </div>
