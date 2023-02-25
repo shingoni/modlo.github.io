@@ -56,29 +56,55 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>In this part we will be diving further into setting up a testing environment. This might be a tricky part and you could encounter some errors, all links and references can be found in the <em>Github Repository.</em></p>
-                        
-                        <p>The guide focuses on three types of environment deployment:
-                        <li>Locally</li>
-                        <li>Virtually</li>
-                        <li>Docker Images</li>
-                            
-                        Deciding which type of deployment you need for your setup depends on the analyzed requirements and test cases which were defined in the <em>two SLTC</em> stages before this one.
-            
-                        In case you are still not sure on which type you should choose, the guide will point out key differences and advantages of each type.
-                        </p>
-                    <h2 class="section-heading">1. Virtual Testing Environment</h2>
-                    <p>
-                        A virtual testing environment consits of setting up a Virtual Machine that runs on a server and deploying your development environment on that machine (i.e an image of the LMS you are testing.)
-                        <br>A Virtual Machine is an emulation of a computer system. Virtual Machines act like normal computers and are based on computer architectures that provide the functionality of a physical machine, however one that is running virtually on a server. This includes advantages such as:</br>
-                    <ul>
-                        <li>1. Reliability: A VM includes virtual resources required to run our software and OS. Everything is virtualized including the Disk Drive, which insures that even if our machine crashes, the host computer is safe.</li>
-                        <li>2. Multiple O/S: The VM is capable of running any desired software, regardless of what type of OS the host system is using. This gives us the ability to choose whatever OS we see fits best to our scenarios. (i.e) A requirement might be that the system runs on Linux, a VM insures that you can test that)</li>
-                    </ul>
-                    </p>
                 <p>
-                This guide will be using <a href="https://okeanos.grnet.gr/services/cyclades/"><em>Cyclades</em></a> to deploy a Virtual Machine running on a server. Cyclades is a VMWare provided by <a href="https://okeanos.grnet.gr/about/what/">Okeanos</a> that is free for students, professors and researchers with a valid academic login.
+                After deploying a test environment and testing your Moodle plugin internally, you might want to move onto the next phase and invite people to test your plugin and interact with it as a normal student/instructor would.
+                <br> This phase is critical to your testing cycle in order to gather as much insight as needed regarding the plugin, and work on enhancing the features based on user given input.
+                <br>To do so, a Survery can be created using <a href="https://docs.google.com">Google Forms</a>
+                <br> How to create a Google Forms Survey:
+                <ul>
+                <li>Login to your Google Account in Google Forms</li>
+                <li>Give your from a title, description and appearance that is related to your plugin</li>
+                <li>Add questions to your form that will help you gather information about the plugin. See the tab below for a question template</li>
+                <li>Share your form with your Moodle plugin users. You can do this by embedding the form in a Moodle page or activity, sharing the link via email, or adding the link to the plugin documentation.</li>
+                <li>Review the responses to your form and use the information to improve your Moodle plugin.</li>
+                </ul>
                 </p>
+                <h3 class="section-subheading">Survey Sample questions</h3>
+                <p>
+                   When creating a survey about a Moodle Plugin, it's important to ask questions that will provide insight into the user's experience with the Plugin. Here are some sample questions you can add to your survey:
+                <ul>
+                <li>How frequently do you use the Plugin?</li>
+                <li>How long have you been using the Plugin?</li>
+                <li>Which features of the Plugin do you use the most?</li>
+                <li>Are there any features you would like to see added to the Plugin?</li>
+                <li>Have you encountered any issues while using the Plugin? If so, please describe them.</li>
+                <li>How easy is it to navigate and use the Plugin?</li>
+                <li>Have you received sufficient documentation or support for the plugin?</li>
+                <li>How has the Plugin improved your experience using Moodle?</li>
+                <li>Would you recommend the Plugin to other Moodle users?</li>
+                <li>Do you have any additional feedback or suggestions for the Plugin?</li>
+                </ul>
+                
+                <br> The questions of the survey are aimed to gain a better understanding of the user's experiences with your plugin, and can guide you in making improvements or adding additional feautres.
+                The template is only aimed to help you, additionaly you can always customize the survery based on the specific needs of your plugin and its users.
+                </p>
+                <h3 class="section-subheading">How to embed the survery in a Moodle Page</h3>
+                <p>If you would like to embed the survery directly to your Moodle page instead of sharing a link, you can follow these steps:
+                <ul>
+                <li>Go to Google Forms and open the form you want to embed.</li>
+                <li>Click on the "Send" button.</li>
+                <li>In the "Send Via" section, click on the "<>" icon to get the embed code for this form</li>
+                <li>Copy the embed code and go to your Moodle site and navigate to the page where you want to embed the form</li>
+                <li>Click on the "Edit" button to open the page editor.</li>
+                <li>Click on the "HTML" button to switch to the HTML Editor</li>
+                <li>Paste the embed code into the HTML editor.</li>
+                <li>Save and publish the paage.</li>
+                </ul>
+                The Google Form should now be embedded to your specified Moodle page, and users should be able to fill it out directly within Moodle.
+                
+                <br> Please note that in case you are using a theme, some of them may have limitations on what can be embedded.
+                </p>
+                
                     </div>
                 </div>
             </div>

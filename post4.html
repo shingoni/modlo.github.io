@@ -97,6 +97,23 @@
                 <br><br> Depending on your testing requirements, you might already have a dummy user database (with enrolled courses) that you could use.
                 <br> If this is not the case, please refer to the Github repository for a <a href="https://github.com/shingoni/modlo.github.io/blob/main/Userdata.csv">CSV file</a>"Userdata.csv" containing basic information for 14 users (Username, First name, Last Name and Email)
                 <br><img src="assets/img/bulk.jpg" alt="Trulli" width="700" height="500">
+                <br><br><b>4. Add Moodle Plugin</b>
+                The folder where you should add your Moodle plugin depends on the type of plugin you are developing. The most common types and corresponding folders:
+                    <ul>
+                    <li>Local plugins: Local Plugins are installed in the "Local" folder in your Moodle installation.
+                    Folder is located at path/moodle/local on your server.</li>   <li>Activity Modules: Activity Modules are installed in the "mod" folder in your Moodle installation. This folder is located at path/moodle/mod on your server.</li> 
+                    <li>Question types: Question types are installed in the "question/type" folder in your Moodle installation. This folder is located at path/moodle/question/type on your server</li>
+                    <li>Blocks: Blocks are installed in the "Blocks" folder in your Moodle installation. This folder is located at path/moodle/blocks on your server</li>
+                    <li>Themes: Themes are installed in the "Theme" folder in your moodle installation. This folder is located at path/moodle/theme on your server</li>
+                    </ul>
+                <br>
+                After copying the plugin into the relevant folder, make sure to enable the plugin in the Site Administration under the "Plugins tab". Make sure all necessary settings are configured correctly.
+                <br><br><b>5. Test the plugin</b>
+                Test the plugin by using it as an instructor or student would. Try all the different settings and options to ensure they work as expected. Test the plugin's functionality in different situations, such as with different users, different types of content, or different settings.
+                <br><br><b>6. Check for errors</b>
+                Check the error log in the Site Administration menu under the "development" tab for any error messages related to the plugin.
+                <br><br><b>7. Debugging</b>
+                        If necessary, use <a href="https://docs.moodle.org/401/en/Debugging">debugging tools</a> such as Xdebug or Moodle Debugger to diagnose any issues that are found
                 </p>
                     </div>
                 </div>

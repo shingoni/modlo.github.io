@@ -44,7 +44,7 @@
                             <span class="meta">
                                 Posted by
                                 <a href="#!">Omar Baz</a>
-                                on August 24, 2022
+                                on January 24, 2023
                             </span>
                         </div>
                     </div>
@@ -113,11 +113,37 @@
                     <li>Hit open. Enter the password you saved from step 2.</li>
                     <li>You're now in the machine. If you want to open the GUI from there, use the command <i>sudo startx</i>.</li>
                 </p>
-                
+                                <h3 class="section-subheading">Cloning virtual machines</h3>
+                In some cases, you might want to clone the virtual machine for future development and testing purposes. In Okeanos, this is done by:
+                <ul>
+                <li>In the Okeanos Global dashboard, go to the "Compute" section and select the VM you want to clone</li>
+                <li>Click on the "More actions" button and select "Clone" from the drop-down menu.</li>
+                <li>In the "Clone Instance" window, give your virtual machine a name and select the size and location for the clone.</li>
+                <li>Review the clone configurations and click on the "Create" button to start the cloning process.</li>
+                <li>Once the cloning process is complete, you will see the new virtual machine in your Okeanos Dashboard. You can log into the new VM and make any necessary changes.</li>
+                </ul>
                 <h3 class="section-subheading">Setting up Moodle on Ubuntu VM</h3>
                 <p>
                 After setting up your Virtual Machine with the desired OS, you are now able to interact with it as if it was your normal computer.
                 Depending on what LMS you are testing, most of them should follow a similair procedure. In this guide we will be using <a href="https://en.wikipedia.org/wiki/Moodle">Moodle</a> for demonstration purposes.
+                <h3 class="section-subheading">(Alternative) Using Docker to test Moodle Plugin</h3>
+                As mentioned in the beginning, there is also the option to use a Docker image to deploy a Moodle testing environment. This is done by:
+                <ul>
+                <li> Install Docker: Download and install docker from the <a href="https://docs.docker.com/get-docker/">official website</a></li>
+                <li>Download the Moodle Bitnami Docker image from the <a href="https://hub.docker.com/r/bitnami/moodle">offical website</a></li>
+                <li>Star the Docker container: Start the Docker container using the following command: <br><br> <i>docker run -p 8080:80 -d --name moodle -v /path/to/moodledata:/var/www/moodledata -e MOODLE_DATABASE_USER=moodle -e MOODLE_DATABASE_PASSWORD=moodle -e MOODLE_DATABASE_NAME=moodle -e MOODLE_URL=http://localhost:8080 moodlehq/moodle-php-apache:latest</i>
+                <br><br>
+                This will start a new Docker container named "Moodle" and bind it to port 8080 on your local machine. Replace /path/moodledata with the path to your Moodle data directory.
+                </li>
+                    
+                <li>
+                Install your plugin: Install your Moodle Plugin as you normally would on a standard Moodle installation (See Local Test Setup for more information)    
+                </li>
+                <li>Test your plugin: Test your plugin by accessing the Moodle site on your local machine at "http://localhost:8080". Log in as adminstrator and test your plugin's functionality</li>
+                
+            
+                </ul>
+
                 </p>
                     </div>
                 </div>
@@ -129,22 +155,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
+
+
                             <li class="list-inline-item">
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
@@ -154,7 +166,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Omar Baz 2023</div>
                     </div>
                 </div>
             </div>
