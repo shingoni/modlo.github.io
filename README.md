@@ -19,3 +19,5 @@ Relevant Links:
 In the final document that serves as the dissertation of my Bachelor's Degree, I have documented all of the sources that this work referenced. 
 The theoritcal background behind the technologies and tools used are described in detail, highlighting the motivation behind choosing them as a standard for this guide.
 The design of the guide is shaped by the elicit requirements that I have gathered during my work, as well as references to the official Moodle Developer guide.
+
+The template was provided by the open source project: https://startbootstrap.com/
